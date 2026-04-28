@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Maureen Wanja Kinuthia — LinkedIn Optimisation | Golden Pipit Recruiting</title>
+<link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --navy:#0F1C2E; --gold:#F5A623; --gold-light:#FDE8BC;
@@ -25,26 +26,36 @@
   .logo-text{color:var(--gold);font-family:'Georgia',serif;font-size:15px;letter-spacing:0.04em;}
   .logo-text span{display:block;color:rgba(255,255,255,0.45);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;margin-top:2px;}
   .header-right{display:flex;align-items:center;gap:16px;}
-  .header-site-link{font-family:sans-serif;font-size:12px;color:rgba(255,255,255,0.55);letter-spacing:0.04em;border:1px solid rgba(245,166,35,0.3);padding:5px 12px;border-radius:20px;transition:all 0.15s;}
+  .header-site-link{font-family:sans-serif;font-size:12px;color:rgba(255,255,255,0.55);border:1px solid rgba(245,166,35,0.3);padding:5px 12px;border-radius:20px;transition:all 0.15s;}
   .header-site-link:hover{color:var(--gold);border-color:var(--gold);text-decoration:none;}
 
   /* HERO */
   .hero{background:var(--navy);padding:64px 40px 56px;text-align:center;border-bottom:3px solid var(--gold);}
   .hero-label{color:var(--gold);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-family:sans-serif;margin-bottom:20px;}
-  .headshot-wrap{margin:0 auto 22px;width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);overflow:hidden;position:relative;}
+  .headshot-wrap{margin:0 auto 22px;width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);overflow:hidden;}
   .headshot-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a2e4a,#0f1c2e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;}
   .headshot-placeholder span{font-family:sans-serif;font-size:8px;color:rgba(245,166,35,0.6);letter-spacing:0.08em;text-transform:uppercase;}
-  .hero h1{color:var(--white);font-size:clamp(26px,5vw,42px);font-weight:normal;letter-spacing:0.01em;line-height:1.15;margin-bottom:8px;}
-  .hero-title{color:var(--gold);font-size:17px;font-style:italic;margin-bottom:28px;letter-spacing:0.03em;}
+  .hero h1{color:var(--white);font-size:clamp(26px,5vw,42px);font-weight:normal;line-height:1.15;margin-bottom:8px;}
+  .hero-title{color:var(--gold);font-size:17px;font-style:italic;margin-bottom:12px;}
+  .hero-linkedin{margin-bottom:28px;}
+  .hero-linkedin a{font-family:sans-serif;font-size:13px;color:rgba(255,255,255,0.55);border:1px solid rgba(255,255,255,0.15);padding:5px 14px;border-radius:20px;transition:all 0.15s;display:inline-flex;align-items:center;gap:6px;}
+  .hero-linkedin a:hover{color:var(--gold);border-color:var(--gold);text-decoration:none;}
   .hero-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;}
-  .btn{display:inline-block;padding:10px 20px;border-radius:4px;font-family:sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;cursor:pointer;transition:opacity 0.15s;}
+  .btn{display:inline-block;padding:10px 20px;border-radius:4px;font-family:sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:opacity 0.15s;}
   .btn:hover{opacity:0.85;text-decoration:none;}
   .btn-gold{background:var(--gold);color:var(--navy);}
   .btn-outline{border:1.5px solid rgba(255,255,255,0.3);color:var(--white);background:transparent;}
   .btn-site{border:1.5px solid var(--gold);color:var(--gold);background:transparent;}
   .hero-meta{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
-  .hero-meta-item{color:rgba(255,255,255,0.5);font-family:sans-serif;font-size:12px;letter-spacing:0.04em;}
+  .hero-meta-item{color:rgba(255,255,255,0.5);font-family:sans-serif;font-size:12px;}
   .hero-meta-item strong{color:rgba(255,255,255,0.82);}
+
+  /* CV DOWNLOAD STRIP */
+  .cv-download-strip{background:var(--gold);padding:18px 40px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .cv-download-strip p{font-family:sans-serif;font-size:13px;font-weight:600;color:var(--navy);}
+  .cv-dl-btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--white);padding:9px 20px;border-radius:4px;font-family:sans-serif;font-size:13px;font-weight:700;transition:opacity 0.15s;text-decoration:none;}
+  .cv-dl-btn:hover{opacity:0.85;text-decoration:none;color:var(--white);}
+  .cv-dl-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
   /* NAV */
   .sticky-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 40px;position:sticky;top:74px;z-index:90;overflow-x:auto;white-space:nowrap;}
@@ -56,7 +67,7 @@
   .section-block{padding:56px 0 0;}
   .section-h2{font-size:22px;font-weight:normal;color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:10px;display:inline-block;margin-bottom:24px;}
 
-  /* ALERT BOXES */
+  /* ALERTS */
   .urgent-box{background:var(--critical-bg);border-left:4px solid var(--critical);border-radius:6px;padding:26px 30px;margin:48px 0 0;}
   .urgent-box .tag{color:var(--critical);font-size:12px;font-family:sans-serif;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;}
   .urgent-box h3{font-size:17px;color:var(--critical);margin-bottom:8px;}
@@ -89,7 +100,7 @@
   .badge-quick{background:var(--quick-bg);color:var(--quick);}
   .opt-body{padding:22px 26px;}
 
-  /* CONTENT BOXES */
+  /* BOXES */
   .box{border-radius:6px;padding:18px 22px;margin-bottom:14px;font-size:14px;line-height:1.7;}
   .current-box{background:#F4F6F9;border-left:3px solid var(--muted);}
   .optimised-box{background:var(--quick-bg);border-left:3px solid var(--quick);}
@@ -98,24 +109,23 @@
   .box-label.opt-lbl{color:var(--quick);}
   .arrow-row{text-align:center;color:var(--gold);font-size:20px;margin:2px 0;}
 
-  /* OPTIMISED CONTENT STYLES */
+  /* OPTIMISED CONTENT */
   .opt-intro{font-size:14px;line-height:1.7;color:var(--text);margin-bottom:12px;font-style:italic;}
   .opt-ul{list-style:none;padding:0;margin:0;}
   .opt-ul li{font-size:14px;color:var(--text);line-height:1.6;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid rgba(26,122,74,0.1);}
   .opt-ul li:last-child{border-bottom:none;}
   .opt-ul li::before{content:"›";position:absolute;left:4px;color:var(--gold);font-weight:700;font-size:16px;top:4px;}
 
-  /* SKILLS GROUPS */
+  /* SKILLS */
   .skills-group{margin-bottom:16px;}
   .skills-group-title{font-family:sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:8px;}
-  .skills-group-title.pin{color:var(--gold);}
   .skills-tags{display:flex;flex-wrap:wrap;gap:7px;}
   .skill-tag{background:var(--navy);color:var(--white);padding:4px 12px;border-radius:20px;font-family:sans-serif;font-size:12px;font-weight:500;}
   .skill-tag.pin{background:var(--gold);color:var(--navy);font-weight:700;}
   .skill-tag.remove{background:#f4f4f4;color:var(--muted);text-decoration:line-through;}
 
-  /* COPY BUTTON */
-  .copy-btn{background:var(--navy);color:var(--white);border:none;padding:4px 12px;border-radius:4px;font-family:sans-serif;font-size:11px;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:background 0.15s;}
+  /* COPY BTN */
+  .copy-btn{background:var(--navy);color:var(--white);border:none;padding:4px 12px;border-radius:4px;font-family:sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:background 0.15s;}
   .copy-btn:hover{background:var(--gold);color:var(--navy);}
   .copy-target{display:none;}
 
@@ -146,17 +156,29 @@
   .fb-send-btn:hover{background:var(--gold);color:var(--navy);}
   .fb-confirm{font-family:sans-serif;font-size:13px;color:var(--quick);margin-top:8px;display:none;}
 
-  /* CV */
+  /* CV SECTION */
   .cv-section{margin-top:64px;padding-top:40px;}
   .cv-section-hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold);padding-bottom:12px;margin-bottom:28px;flex-wrap:wrap;gap:12px;}
   .cv-section-hdr h2{font-size:21px;font-weight:normal;color:var(--navy);}
-  .cv-doc{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:44px 48px;font-family:sans-serif;}
-  .cv-name{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:0.02em;margin-bottom:3px;}
-  .cv-jobtitle{font-size:13px;color:var(--gold);font-weight:600;letter-spacing:0.09em;text-transform:uppercase;margin-bottom:5px;}
-  .cv-contact{font-size:12px;color:var(--muted);margin-bottom:22px;line-height:1.9;}
-  .cv-sec{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);border-bottom:1.5px solid var(--navy);padding-bottom:4px;margin:26px 0 12px;}
-  .cv-profile{font-size:13px;line-height:1.7;margin-bottom:6px;}
-  .cv-job{margin-bottom:20px;}
+
+  /* CV TABS */
+  .cv-tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
+  .cv-tab{padding:9px 20px;border-radius:4px;font-family:sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);color:var(--muted);background:var(--white);transition:all 0.15s;}
+  .cv-tab.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+  .cv-tab:hover:not(.active){border-color:var(--gold);color:var(--navy);}
+  .cv-pane{display:none;}
+  .cv-pane.active{display:block;}
+
+  /* CV DISPLAY */
+  .cv-doc{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:40px 44px;font-family:sans-serif;}
+  .cv-name{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:0.02em;margin-bottom:3px;}
+  .cv-jobtitle{font-size:12px;color:var(--gold);font-weight:600;letter-spacing:0.09em;text-transform:uppercase;margin-bottom:5px;}
+  .cv-contact{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.9;}
+  .cv-contact a{color:var(--muted);}
+  .cv-contact a:hover{color:var(--gold);}
+  .cv-sec{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);border-bottom:1.5px solid var(--navy);padding-bottom:4px;margin:24px 0 11px;}
+  .cv-profile-text{font-size:13px;line-height:1.7;margin-bottom:6px;}
+  .cv-job{margin-bottom:18px;}
   .cv-jh{display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px;margin-bottom:2px;}
   .cv-emp{font-size:13px;font-weight:700;color:var(--navy);}
   .cv-dates{font-size:12px;color:var(--muted);}
@@ -164,9 +186,15 @@
   .cv-ul{padding-left:16px;}
   .cv-ul li{font-size:12px;color:var(--text);margin-bottom:4px;line-height:1.55;}
   .cv-skills-txt{font-size:12px;color:var(--text);line-height:1.9;}
-  .cv-edu-item{margin-bottom:9px;}
+  .cv-edu-item{margin-bottom:8px;}
   .cv-edu-item strong{font-size:12px;color:var(--navy);display:block;}
   .cv-edu-item span{font-size:12px;color:var(--muted);}
+
+  /* CV FEEDBACK */
+  .cv-feedback-box{margin-top:20px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;}
+  .cv-feedback-box h4{font-family:sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .cv-feedback-box p{font-family:sans-serif;font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.6;}
+  .cv-dl-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
 
   /* OVERALL FEEDBACK */
   .overall-fb{margin-top:64px;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:34px 38px;}
@@ -176,12 +204,12 @@
   .overall-fb textarea{width:100%;border:1px solid var(--border);border-radius:6px;padding:9px 14px;font-family:sans-serif;font-size:13px;color:var(--text);outline:none;min-height:100px;resize:vertical;margin-top:5px;}
   .overall-fb textarea:focus{border-color:var(--gold);}
 
-  /* PROMO BAND */
+  /* PROMO */
   .promo-band{background:var(--navy);border-top:3px solid var(--gold);padding:48px 40px;text-align:center;margin-top:80px;}
   .promo-band p{color:rgba(255,255,255,0.6);font-family:sans-serif;font-size:14px;margin-bottom:6px;}
   .promo-band h3{color:var(--white);font-size:20px;font-weight:normal;margin-bottom:8px;}
   .promo-band .tagline{color:rgba(255,255,255,0.5);font-family:sans-serif;font-size:13px;margin-bottom:24px;}
-  .promo-btn{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:4px;font-family:sans-serif;font-size:14px;font-weight:700;letter-spacing:0.03em;transition:opacity 0.15s;}
+  .promo-btn{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:4px;font-family:sans-serif;font-size:14px;font-weight:700;transition:opacity 0.15s;}
   .promo-btn:hover{opacity:0.85;text-decoration:none;}
 
   footer{background:var(--navy);color:rgba(255,255,255,0.38);text-align:center;padding:32px 24px;font-family:sans-serif;font-size:12px;line-height:2.2;}
@@ -192,33 +220,22 @@
     .site-header{padding:12px 20px;}
     .sticky-nav{padding:0 12px;}
     .container{padding:0 16px;}
-    .cv-doc{padding:26px 18px;}
+    .cv-doc{padding:24px 16px;}
     .overall-fb{padding:22px 18px;}
     .opt-body{padding:16px 16px;}
     .opt-header{padding:14px 16px;}
     .promo-band{padding:36px 24px;}
+    .cv-download-strip{padding:14px 20px;}
   }
 </style>
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="logo-area">
-    <!--
-      IMAGE SWAP INSTRUCTIONS
-      =======================
-      When you save this as index.html in your project folder:
-
-      LOGO: Replace the div below with:
-        <img class="logo-img" src="images/logo.png" alt="Golden Pipit Recruiting"/>
-      (rename your logo file to logo.png and place it in an /images subfolder)
-
-      HEADSHOT: In the hero section below, replace the headshot-placeholder div with:
-        <img src="images/maureen.jpg" alt="Maureen Wanja Kinuthia" style="width:100%;height:100%;object-fit:cover;"/>
-      (rename Maureen's photo to maureen.jpg and place it in the same /images subfolder)
-    -->
-    <img class="logo-img" src="images/logo.png" alt="Golden Pipit Recruiting"/>
+    <!-- SWAP: <img class="logo-img" src="images/logo.png" alt="Golden Pipit Recruiting"/> -->
+    <div class="logo-placeholder">GPR<br/>LOGO</div>
     <div class="logo-text">Golden Pipit<span>Recruiting</span></div>
   </div>
   <div class="header-right">
@@ -227,29 +244,50 @@
   </div>
 </header>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-label">LinkedIn Optimisation Report</div>
   <div class="headshot-wrap">
-    <!-- HEADSHOT SWAP: replace this div with <img src="images/maureen.jpg" ...> — see instructions in header comment above -->
-    <img src="images/maureen.jpg" alt="Maureen Wanja Kinuthia" style="width:100%;height:100%;object-fit:cover;"/>
+    <!-- SWAP: <img src="images/maureen.jpg" alt="Maureen Wanja Kinuthia" style="width:100%;height:100%;object-fit:cover;"/> -->
+    <div class="headshot-placeholder">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="13" r="7" fill="rgba(245,166,35,0.5)"/><path d="M4 32c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(245,166,35,0.4)" stroke-width="2" fill="none"/></svg>
+      <span>Photo</span>
+    </div>
   </div>
   <h1>Maureen Wanja Kinuthia</h1>
   <div class="hero-title">Executive Assistant</div>
+  <div class="hero-linkedin">
+    <a href="https://www.linkedin.com/in/maureen-wanja-7160bb125/" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      linkedin.com/in/maureen-wanja-7160bb125
+    </a>
+  </div>
   <div class="hero-cta-row">
     <a href="#feedback" class="btn btn-outline">Share your feedback</a>
-    <a href="#cv-section" class="btn btn-gold">↓ View &amp; edit CV</a>
+    <a href="#cv-section" class="btn btn-gold">↓ View your CVs</a>
     <a href="https://goldenpipitcareers.com" target="_blank" class="btn btn-site">Visit GP Careers ↗</a>
   </div>
   <div class="hero-meta">
     <div class="hero-meta-item">Ref <strong>PO-120</strong></div>
     <div class="hero-meta-item">Prepared <strong>April 2026</strong></div>
-    <div class="hero-meta-item">Profile <strong>linkedin.com/in/maureen-wanja-7160bb125</strong></div>
     <div class="hero-meta-item">Status <strong>Awaiting feedback</strong></div>
   </div>
 </div>
 
-<!-- ═══ NAV ═══ -->
+<!-- CV DOWNLOAD STRIP -->
+<div class="cv-download-strip">
+  <p>Your CVs are ready to download:</p>
+  <a href="images/maureen-cv-ea.pdf" download="Maureen-Wanja-Kinuthia-CV-ExecutiveAssistant.pdf" class="cv-dl-btn">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Executive Assistant CV
+  </a>
+  <a href="images/maureen-cv-admin.pdf" download="Maureen-Wanja-Kinuthia-CV-Administrator.pdf" class="cv-dl-btn">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Administrator CV
+  </a>
+</div>
+
+<!-- STICKY NAV -->
 <nav class="sticky-nav">
   <a href="#how-to">How to use</a>
   <a href="#s1">Headline</a>
@@ -258,7 +296,7 @@
   <a href="#s9">Skills</a>
   <a href="#s10">Education</a>
   <a href="#s-presence">Presence</a>
-  <a href="#cv-section">Your CV →</a>
+  <a href="#cv-section">Your CVs →</a>
 </nav>
 
 <div class="container">
@@ -267,14 +305,14 @@
   <div class="urgent-box">
     <div class="tag">◆ Most urgent change</div>
     <h3>Your headline must lead with your identity, not your job title</h3>
-    <p>Your current LinkedIn headline almost certainly reads "Administrator at Square Pharmaceuticals" — a job title with no positioning value. You have 6+ years of executive support experience, a track record of process improvement, and credibility built across pharmaceuticals, logistics, and the humanitarian sector. That story needs to be told in your headline before recruiters ever reach your About section. Start here.</p>
+    <p>Your current LinkedIn headline almost certainly reads "Administrator at Square Pharmaceuticals" — a job title with no positioning value. You have 6+ years of executive support experience across pharmaceuticals, logistics, finance, and the humanitarian sector. That story needs to be told in your headline before recruiters ever reach your About section. Start here.</p>
   </div>
   <div class="confirm-box">
     <div class="tag">◇ Dates &amp; titles — please confirm</div>
     <h3>A few items to verify before anything goes live</h3>
     <ul>
       <li><strong>Current role title:</strong> Your CV lists "Administrator" at Square Pharmaceuticals Kenya EPZ Ltd. Please confirm this is the exact title shown on your LinkedIn profile.</li>
-      <li><strong>Timeline gap:</strong> Your CV shows Kuehne + Nagel Oct 2021–Mar 2022 and Kenya Red Cross ending Jul 2021. Please confirm whether any roles are missing between these dates.</li>
+      <li><strong>Timeline gap:</strong> There is a gap between Premier Credit Limited (May 2018) and Kenya Red Cross Society (Jan 2019) and between Red Cross (Jul 2021) and Kuehne + Nagel (Oct 2021). Please confirm whether any roles are missing.</li>
       <li><strong>Existing About section:</strong> If your LinkedIn About section already has content, please share it so we can preserve anything useful.</li>
     </ul>
   </div>
@@ -282,7 +320,7 @@
   <!-- HOW TO -->
   <div class="how-to" id="how-to">
     <h2 class="section-h2">How to update your LinkedIn</h2>
-    <p style="font-family:sans-serif;font-size:14px;color:var(--muted);margin-bottom:18px;">All changes should be made by you, directly from your own account. This keeps your profile safe from third-party access flags LinkedIn monitors.</p>
+    <p style="font-family:sans-serif;font-size:14px;color:var(--muted);margin-bottom:18px;">All changes should be made by you, directly from your own account.</p>
     <div class="steps">
       <div class="step-card"><div class="step-num">1</div><h4>Open LinkedIn alongside this page</h4><p>Keep this portal open in one tab, your LinkedIn profile in another.</p></div>
       <div class="step-card"><div class="step-num">2</div><h4>Review optimised copy</h4><p>Read current vs. optimised and the rationale behind each change.</p></div>
@@ -292,7 +330,7 @@
     <p style="font-family:sans-serif;font-size:13px;color:var(--muted);margin-top:18px;"><strong>Suggested order:</strong> Start with <strong>Headline</strong>, then <strong>About</strong>, then Experience entries in order.</p>
   </div>
 
-  <!-- ══ S01 HEADLINE ══ -->
+  <!-- S01 HEADLINE -->
   <div class="section-block" id="s1">
     <div class="opt-section">
       <div class="opt-header">
@@ -301,11 +339,7 @@
         <span class="badge badge-critical">Critical</span>
       </div>
       <div class="opt-body">
-        <div class="box current-box">
-          <div class="box-label current-lbl">Current</div>
-          Administrator at Square Pharmaceuticals Kenya EPZ Ltd
-          <div style="font-family:sans-serif;font-size:12px;color:var(--muted);margin-top:6px;">Job title only — no keywords, no positioning, no value proposition.</div>
-        </div>
+        <div class="box current-box"><div class="box-label current-lbl">Current</div>Administrator at Square Pharmaceuticals Kenya EPZ Ltd<div style="font-family:sans-serif;font-size:12px;color:var(--muted);margin-top:6px;">Job title only — no keywords, no positioning, no value proposition.</div></div>
         <div class="arrow-row">→</div>
         <div class="box optimised-box">
           <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('hl-copy',this)">⎘ Copy</button></div>
@@ -313,10 +347,10 @@
           <textarea class="copy-target" id="hl-copy">Executive Assistant | Calendar & Stakeholder Management | Process Improvement | Nairobi, Kenya</textarea>
         </div>
         <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-        <div class="rationale-content">The headline is the most heavily weighted field in LinkedIn's search algorithm. "Administrator" returns undifferentiated results. This version leads with the role direction you are pursuing (Executive Assistant), surfaces the two functional keywords most searched by EA hiring managers, adds a process improvement signal that speaks to impact, and anchors you in the Nairobi market.</div>
+        <div class="rationale-content">The headline is the most heavily weighted field in LinkedIn's search algorithm. This version leads with the role direction you are pursuing (Executive Assistant), surfaces the two functional keywords most searched by EA hiring managers, adds a process improvement signal, and anchors you in the Nairobi market.</div>
         <button class="fb-toggle-btn" onclick="toggleFB(this)">Leave feedback on this section ▾</button>
         <div class="fb-panel">
-          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
           <div class="email-hint"></div>
           <textarea class="fb-ta" placeholder="Your comments on the headline..."></textarea>
           <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -326,7 +360,7 @@
     </div>
   </div>
 
-  <!-- ══ S02 ABOUT ══ -->
+  <!-- S02 ABOUT -->
   <div class="section-block" id="s2">
     <div class="opt-section">
       <div class="opt-header">
@@ -335,33 +369,30 @@
         <span class="badge badge-critical">Critical</span>
       </div>
       <div class="opt-body">
-        <div class="box current-box">
-          <div class="box-label current-lbl">Current</div>
-          Not visible / generic — likely a brief title-based description with no narrative or value proposition.
-        </div>
+        <div class="box current-box"><div class="box-label current-lbl">Current</div>Not visible / generic — likely a brief title-based description with no narrative or value proposition.</div>
         <div class="arrow-row">→</div>
         <div class="box optimised-box">
           <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('about-copy',this)">⎘ Copy</button></div>
-          <p style="font-size:14px;line-height:1.75;color:var(--text);">I keep executives focused on what matters — by managing the moving parts they shouldn't have to think about.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text);margin-top:10px;">Over six years across pharmaceuticals, logistics, and the humanitarian sector, I have provided end-to-end executive support: managing senior leader calendars, coordinating high-level meetings and stakeholder communications, maintaining confidential records, and driving process improvements that have measurably reduced turnaround times and supply disruptions.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text);margin-top:10px;">At Square Pharmaceuticals, I oversee day-to-day administrative operations including executive scheduling, stakeholder correspondence, and records management — with a consistent focus on accuracy, discretion, and follow-through. Previously at Kuehne + Nagel, I managed end-to-end customer and stakeholder communication across a fast-moving logistics environment. My earlier background in procurement at Kenya Red Cross gave me a strong foundation in documentation, vendor coordination, and structured operational workflows.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text);margin-top:10px;">I am particularly drawn to roles where an EA operates as a genuine strategic partner to leadership — anticipating needs, protecting time, and ensuring smooth operations across a complex calendar and stakeholder environment.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text);margin-top:10px;">📍 Nairobi, Kenya · Open to Executive Assistant and Senior Administrative roles.</p>
+          <p style="font-size:14px;line-height:1.75;">I keep executives focused on what matters — by managing the moving parts they shouldn't have to think about.</p>
+          <p style="font-size:14px;line-height:1.75;margin-top:10px;">Over six years across pharmaceuticals, logistics, finance, and the humanitarian sector, I have provided end-to-end executive and administrative support: managing senior leader calendars, coordinating high-level meetings and stakeholder communications, maintaining confidential records, and driving process improvements that have measurably reduced turnaround times.</p>
+          <p style="font-size:14px;line-height:1.75;margin-top:10px;">At Square Pharmaceuticals, I oversee executive scheduling, stakeholder correspondence, and records management with a consistent focus on accuracy and discretion. Previously at Kuehne + Nagel, I managed customer and stakeholder communication in a fast-moving global logistics environment. My background also spans procurement at Kenya Red Cross and customer service at Premier Credit Limited — giving me a strong foundation in documentation, process compliance, and high-volume stakeholder management.</p>
+          <p style="font-size:14px;line-height:1.75;margin-top:10px;">I am particularly drawn to roles where an EA operates as a genuine strategic partner to leadership — anticipating needs, protecting time, and ensuring smooth operations.</p>
+          <p style="font-size:14px;line-height:1.75;margin-top:10px;">📍 Nairobi, Kenya · Open to Executive Assistant and Senior Administrative roles.</p>
           <textarea class="copy-target" id="about-copy">I keep executives focused on what matters — by managing the moving parts they shouldn't have to think about.
 
-Over six years across pharmaceuticals, logistics, and the humanitarian sector, I have provided end-to-end executive support: managing senior leader calendars, coordinating high-level meetings and stakeholder communications, maintaining confidential records, and driving process improvements that have measurably reduced turnaround times and supply disruptions.
+Over six years across pharmaceuticals, logistics, finance, and the humanitarian sector, I have provided end-to-end executive and administrative support: managing senior leader calendars, coordinating high-level meetings and stakeholder communications, maintaining confidential records, and driving process improvements that have measurably reduced turnaround times.
 
-At Square Pharmaceuticals, I oversee day-to-day administrative operations including executive scheduling, stakeholder correspondence, and records management — with a consistent focus on accuracy, discretion, and follow-through. Previously at Kuehne + Nagel, I managed end-to-end customer and stakeholder communication across a fast-moving logistics environment. My earlier background in procurement at Kenya Red Cross gave me a strong foundation in documentation, vendor coordination, and structured operational workflows.
+At Square Pharmaceuticals, I oversee executive scheduling, stakeholder correspondence, and records management with a consistent focus on accuracy and discretion. Previously at Kuehne + Nagel, I managed customer and stakeholder communication in a fast-moving global logistics environment. My background also spans procurement at Kenya Red Cross and customer service at Premier Credit Limited — giving me a strong foundation in documentation, process compliance, and high-volume stakeholder management.
 
-I am particularly drawn to roles where an EA operates as a genuine strategic partner to leadership — anticipating needs, protecting time, and ensuring smooth operations across a complex calendar and stakeholder environment.
+I am particularly drawn to roles where an EA operates as a genuine strategic partner to leadership — anticipating needs, protecting time, and ensuring smooth operations.
 
 📍 Nairobi, Kenya · Open to Executive Assistant and Senior Administrative roles.</textarea>
         </div>
         <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-        <div class="rationale-content">Rewritten in first person — the global standard for LinkedIn About sections. The opening line is the hook: it leads with value delivered to others. The structure moves from hook → evidence → current role → aspiration → call to action. Cross-sector credibility (pharma, logistics, humanitarian) is a genuine differentiator. The final paragraph signals career ambition at the right level without overclaiming.</div>
+        <div class="rationale-content">Rewritten in first person with a hook-first structure. Now references all four employers, broadening the credibility signal across sectors. Premier Credit Limited's inclusion signals customer-facing communication depth — a valued EA competency.</div>
         <button class="fb-toggle-btn" onclick="toggleFB(this)">Leave feedback on this section ▾</button>
         <div class="fb-panel">
-          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
           <div class="email-hint"></div>
           <textarea class="fb-ta" placeholder="Your comments on the About section..."></textarea>
           <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -376,7 +407,7 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
     <h2 class="section-h2">Experience</h2>
   </div>
 
-  <!-- ══ S03 SQUARE PHARMA ══ -->
+  <!-- S03 SQUARE PHARMA -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
       <div class="opt-num">03</div>
@@ -384,34 +415,31 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
       <span class="badge badge-high">High impact</span>
     </div>
     <div class="opt-body">
-      <div class="box current-box">
-        <div class="box-label current-lbl">Current</div>
-        No description on LinkedIn — no quantified outcomes, no stakeholder context, no scope of responsibility.
-      </div>
+      <div class="box current-box"><div class="box-label current-lbl">Current</div>No description on LinkedIn — no quantified outcomes, no stakeholder context.</div>
       <div class="arrow-row">→</div>
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('exp1-copy',this)">⎘ Copy</button></div>
-        <p class="opt-intro">Square Pharmaceuticals Kenya EPZ Ltd is a subsidiary of Square Pharmaceuticals Bangladesh, one of South Asia's largest pharmaceutical manufacturers. In this role I provide full-spectrum executive and administrative support within a regulated manufacturing environment, with accountability for stakeholder communication, executive calendar management, confidential records, and operational continuity.</p>
+        <p class="opt-intro">Square Pharmaceuticals Kenya EPZ Ltd is a subsidiary of Square Pharmaceuticals Bangladesh, one of South Asia's largest pharmaceutical manufacturers. In this role I provide full-spectrum executive and administrative support within a regulated manufacturing environment.</p>
         <ul class="opt-ul">
-          <li>Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised, logistically sound, and run to time</li>
-          <li>Screen and route executive correspondence and stakeholder inquiries, maintaining a professional experience and ensuring timely follow-up</li>
-          <li>Maintain confidential records and administrative documentation with accuracy and discretion, completing urgent updates promptly</li>
+          <li>Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised and run to time</li>
+          <li>Screen and route executive correspondence and stakeholder inquiries, maintaining professional follow-up and timely resolution</li>
+          <li>Maintain confidential records and administrative documentation with accuracy and discretion</li>
           <li>Reduced urgent supply shortages by ~30% within six months through proactive stock monitoring and requisition coordination</li>
           <li>Improved recurring administrative turnaround by ~20% through SOP-driven workflow redesign and tighter handoff coordination</li>
         </ul>
-        <textarea class="copy-target" id="exp1-copy">Square Pharmaceuticals Kenya EPZ Ltd is a subsidiary of Square Pharmaceuticals Bangladesh, one of South Asia's largest pharmaceutical manufacturers. In this role I provide full-spectrum executive and administrative support within a regulated manufacturing environment, with accountability for stakeholder communication, executive calendar management, confidential records, and operational continuity.
+        <textarea class="copy-target" id="exp1-copy">Square Pharmaceuticals Kenya EPZ Ltd is a subsidiary of Square Pharmaceuticals Bangladesh, one of South Asia's largest pharmaceutical manufacturers. In this role I provide full-spectrum executive and administrative support within a regulated manufacturing environment.
 
-• Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised, logistically sound, and run to time
-• Screen and route executive correspondence and stakeholder inquiries, maintaining a professional experience and ensuring timely follow-up
-• Maintain confidential records and administrative documentation with accuracy and discretion, completing urgent updates promptly
+• Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised and run to time
+• Screen and route executive correspondence and stakeholder inquiries, maintaining professional follow-up and timely resolution
+• Maintain confidential records and administrative documentation with accuracy and discretion
 • Reduced urgent supply shortages by ~30% within six months through proactive stock monitoring and requisition coordination
 • Improved recurring administrative turnaround by ~20% through SOP-driven workflow redesign and tighter handoff coordination</textarea>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">The intro paragraph gives recruiters immediate context — who the employer is and what the role entails — before they read any bullet. The two quantified achievements (30% supply shortage reduction, 20% turnaround improvement) are rare and compelling numbers that most EA candidates cannot produce, placed at the end of the list as proof of impact.</div>
+      <div class="rationale-content">The two quantified achievements (30% supply shortage reduction, 20% turnaround improvement) are rare and compelling numbers for EA candidates. Placed at the end of the list as proof of impact rather than preamble.</div>
       <button class="fb-toggle-btn" onclick="toggleFB(this)">Comments or corrections ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
         <textarea class="fb-ta" placeholder="Any corrections to title, dates, or bullets?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -420,7 +448,7 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
     </div>
   </div>
 
-  <!-- ══ S04 KUEHNE NAGEL ══ -->
+  <!-- S04 KUEHNE NAGEL -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
       <div class="opt-num">04</div>
@@ -428,21 +456,18 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
       <span class="badge badge-high">High impact</span>
     </div>
     <div class="opt-body">
-      <div class="box current-box">
-        <div class="box-label current-lbl">Current</div>
-        Likely brief or missing. A globally recognised logistics brand used below its credibility potential.
-      </div>
+      <div class="box current-box"><div class="box-label current-lbl">Current</div>Likely brief or missing. A globally recognised logistics brand used below its credibility potential.</div>
       <div class="arrow-row">→</div>
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('exp2-copy',this)">⎘ Copy</button></div>
-        <p class="opt-intro">Kuehne + Nagel is one of the world's leading logistics providers, operating in over 100 countries. In this role I delivered end-to-end customer and stakeholder communication within a fast-paced, high-accountability environment, managing shipment coordination, complaint resolution, and client documentation.</p>
+        <p class="opt-intro">Kuehne + Nagel is one of the world's leading logistics providers, operating in over 100 countries. In this role I delivered end-to-end customer and stakeholder communication within a fast-paced, high-accountability environment.</p>
         <ul class="opt-ul">
           <li>Monitored customer shipments and provided proactive status updates, resolving issues early to reduce delays and escalations</li>
           <li>Received and managed complaint calls, coordinating with internal stakeholders through to resolution within agreed service timelines</li>
           <li>Prepared and followed up on client quotations, handling 20+ inquiries weekly with a 24-hour response turnaround commitment</li>
           <li>Maintained organised client records and supported root cause documentation and investigations in internal KN systems</li>
         </ul>
-        <textarea class="copy-target" id="exp2-copy">Kuehne + Nagel is one of the world's leading logistics providers, operating in over 100 countries. In this role I delivered end-to-end customer and stakeholder communication within a fast-paced, high-accountability environment, managing shipment coordination, complaint resolution, and client documentation.
+        <textarea class="copy-target" id="exp2-copy">Kuehne + Nagel is one of the world's leading logistics providers, operating in over 100 countries. In this role I delivered end-to-end customer and stakeholder communication within a fast-paced, high-accountability environment.
 
 • Monitored customer shipments and provided proactive status updates, resolving issues early to reduce delays and escalations
 • Received and managed complaint calls, coordinating with internal stakeholders through to resolution within agreed service timelines
@@ -450,10 +475,10 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
 • Maintained organised client records and supported root cause documentation and investigations in internal KN systems</textarea>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">The intro anchors the brand's global credibility before the bullets — recruiters unfamiliar with the Nairobi office immediately understand the calibre of the organisation. The bullets surface the skills most transferable to EA roles: stakeholder communication, issue resolution, volume throughput, and documentation.</div>
+      <div class="rationale-content">The intro anchors the brand's global credibility before the bullets. The 24-hour response turnaround is a meaningful commitment signal that most EA candidates cannot produce.</div>
       <button class="fb-toggle-btn" onclick="toggleFB(this)">Comments or corrections ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
         <textarea class="fb-ta" placeholder="Any corrections to dates, titles, or bullet points?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -462,7 +487,7 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
     </div>
   </div>
 
-  <!-- ══ S05 RED CROSS ══ -->
+  <!-- S05 RED CROSS -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
       <div class="opt-num">05</div>
@@ -470,21 +495,18 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
       <span class="badge badge-medium">Medium impact</span>
     </div>
     <div class="opt-body">
-      <div class="box current-box">
-        <div class="box-label current-lbl">Current</div>
-        Likely minimal or no description. Kenya Red Cross is a high-credibility employer — this brand should be working harder.
-      </div>
+      <div class="box current-box"><div class="box-label current-lbl">Current</div>Likely minimal or no description. Kenya Red Cross is a high-credibility employer — this brand should be working harder.</div>
       <div class="arrow-row">→</div>
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('exp3-copy',this)">⎘ Copy</button></div>
-        <p class="opt-intro">Kenya Red Cross Society is one of East Africa's largest humanitarian organisations, providing emergency response, disaster management, and community services across the country. In this role I supported procurement operations within a compliance-focused, high-volume environment, managing documentation, vendor coordination, and end-to-end procurement workflows.</p>
+        <p class="opt-intro">Kenya Red Cross Society is one of East Africa's largest humanitarian organisations, providing emergency response, disaster management, and community services across the country. In this role I supported procurement operations within a compliance-focused, high-volume environment.</p>
         <ul class="opt-ul">
           <li>Tracked 30+ active orders weekly, escalating delays and coordinating with Finance for timely invoice processing</li>
           <li>Supported 10+ tender processes quarterly — including tender openings and vendor evaluation — ensuring accurate documentation throughout</li>
           <li>Prepared and issued LPOs, award letters, and tender-related correspondence in line with procurement procedures</li>
           <li>Maintained procurement records and updated internal systems with accuracy, supporting audit readiness and process transparency</li>
         </ul>
-        <textarea class="copy-target" id="exp3-copy">Kenya Red Cross Society is one of East Africa's largest humanitarian organisations, providing emergency response, disaster management, and community services across the country. In this role I supported procurement operations within a compliance-focused, high-volume environment, managing documentation, vendor coordination, and end-to-end procurement workflows.
+        <textarea class="copy-target" id="exp3-copy">Kenya Red Cross Society is one of East Africa's largest humanitarian organisations, providing emergency response, disaster management, and community services across the country. In this role I supported procurement operations within a compliance-focused, high-volume environment.
 
 • Tracked 30+ active orders weekly, escalating delays and coordinating with Finance for timely invoice processing
 • Supported 10+ tender processes quarterly — including tender openings and vendor evaluation — ensuring accurate documentation throughout
@@ -492,10 +514,10 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
 • Maintained procurement records and updated internal systems with accuracy, supporting audit readiness and process transparency</textarea>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">Kenya Red Cross is internationally recognised and should be framed as such. The procurement background establishes critical transferable competencies for EA roles: documentation rigour, vendor communication, process compliance, and high-volume tracking — all of which signal structured operational capability under pressure.</div>
+      <div class="rationale-content">Kenya Red Cross is internationally recognised and the procurement background establishes critical transferable competencies: documentation rigour, vendor communication, and process compliance — all valued in EA roles.</div>
       <button class="fb-toggle-btn" onclick="toggleFB(this)">Comments or corrections ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
         <textarea class="fb-ta" placeholder="Any corrections to dates, titles, or achievements?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -504,32 +526,66 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
     </div>
   </div>
 
-  <!-- ══ S06 SKILLS ══ -->
+  <!-- S06 PREMIER CREDIT — NEW -->
+  <div class="opt-section" style="margin-top:20px;">
+    <div class="opt-header">
+      <div class="opt-num">06</div>
+      <div class="opt-title-group"><h3>Premier Credit Limited — Customer Service Officer</h3><div class="sub">Nairobi, Kenya · Jun 2017 – May 2018</div></div>
+      <span class="badge badge-medium">Medium impact</span>
+    </div>
+    <div class="opt-body">
+      <div class="box current-box"><div class="box-label current-lbl">Current</div>Likely missing entirely from LinkedIn. A financial services entry adds sector breadth and reinforces customer-facing communication skills.</div>
+      <div class="arrow-row">→</div>
+      <div class="box optimised-box">
+        <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('exp4-copy',this)">⎘ Copy</button></div>
+        <p class="opt-intro">Premier Credit Limited is a Kenya-based financial services provider offering credit and lending solutions. In this role I delivered frontline customer service across multiple channels, supporting onboarding, complaint resolution, and loan processing within a regulated environment.</p>
+        <ul class="opt-ul">
+          <li>Responded to customer inquiries via phone, electronic channels, and face-to-face engagements, maintaining a professional and responsive service experience</li>
+          <li>Handled and resolved customer complaints, coordinating follow-up with relevant internal teams through to resolution</li>
+          <li>Performed customer verifications and supported new account setup in line with SOPs and compliance requirements</li>
+          <li>Processed customer forms and loan requests accurately, maintaining complete and compliant records throughout</li>
+        </ul>
+        <textarea class="copy-target" id="exp4-copy">Premier Credit Limited is a Kenya-based financial services provider offering credit and lending solutions. In this role I delivered frontline customer service across multiple channels, supporting onboarding, complaint resolution, and loan processing within a regulated environment.
+
+• Responded to customer inquiries via phone, electronic channels, and face-to-face engagements, maintaining a professional and responsive service experience
+• Handled and resolved customer complaints, coordinating follow-up with relevant internal teams through to resolution
+• Performed customer verifications and supported new account setup in line with SOPs and compliance requirements
+• Processed customer forms and loan requests accurately, maintaining complete and compliant records throughout</textarea>
+      </div>
+      <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
+      <div class="rationale-content">Financial services experience adds sector breadth to a profile currently spanning pharma, logistics, and humanitarian. The regulated environment context (SOPs, compliance, accurate records) reinforces the same competencies EA hiring managers look for — discretion, accuracy, and structured process adherence.</div>
+      <button class="fb-toggle-btn" onclick="toggleFB(this)">Comments or corrections ▾</button>
+      <div class="fb-panel">
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
+        <div class="email-hint"></div>
+        <textarea class="fb-ta" placeholder="Any corrections to dates, titles, or bullets?"></textarea>
+        <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
+        <div class="fb-confirm">✓ Feedback sent. We will be in touch within one business day.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S07 SKILLS -->
   <div class="section-block" id="s9">
     <div class="opt-section">
       <div class="opt-header">
-        <div class="opt-num">06</div>
+        <div class="opt-num">07</div>
         <div class="opt-title-group"><h3>Skills</h3><div class="sub">Weighted in LinkedIn's search algorithm. Top 3 pinned skills appear on your profile card.</div></div>
         <span class="badge badge-high">High impact</span>
       </div>
       <div class="opt-body">
-        <div class="box current-box">
-          <div class="box-label current-lbl">Current</div>
-          Unknown — likely generic. Key EA-specific keywords are probably missing: Calendar Management, Executive Support, Stakeholder Communication.
-        </div>
+        <div class="box current-box"><div class="box-label current-lbl">Current</div>Unknown — likely generic. Key EA-specific keywords are probably missing.</div>
         <div class="arrow-row">→</div>
         <div class="box optimised-box">
           <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('skills-copy',this)">⎘ Copy</button></div>
-
           <div class="skills-group">
-            <div class="skills-group-title pin">📌 Pin these 3 first (profile card visibility)</div>
+            <div class="skills-group-title" style="color:var(--gold)">📌 Pin these 3 first</div>
             <div class="skills-tags">
               <span class="skill-tag pin">Executive Calendar Management</span>
               <span class="skill-tag pin">Stakeholder Communication</span>
               <span class="skill-tag pin">Administrative Operations</span>
             </div>
           </div>
-
           <div class="skills-group" style="margin-top:16px;">
             <div class="skills-group-title">Add these skills</div>
             <div class="skills-tags">
@@ -538,42 +594,36 @@ I am particularly drawn to roles where an EA operates as a genuine strategic par
               <span class="skill-tag">Records Confidentiality</span>
               <span class="skill-tag">Process Improvement</span>
               <span class="skill-tag">Meeting Coordination</span>
-              <span class="skill-tag">Travel &amp; Logistics Coordination</span>
               <span class="skill-tag">Office Administration</span>
               <span class="skill-tag">MS Excel</span>
-              <span class="skill-tag">MS Word</span>
               <span class="skill-tag">MS Outlook</span>
               <span class="skill-tag">Procurement Support</span>
-              <span class="skill-tag">Vendor Coordination</span>
               <span class="skill-tag">Customer Service</span>
+              <span class="skill-tag">Complaint Resolution</span>
             </div>
           </div>
-
           <div class="skills-group" style="margin-top:16px;">
-            <div class="skills-group-title" style="color:var(--muted);">Consider removing (no search weight)</div>
+            <div class="skills-group-title" style="color:var(--muted)">Consider removing</div>
             <div class="skills-tags">
               <span class="skill-tag remove">Teamwork</span>
               <span class="skill-tag remove">Hard Work</span>
               <span class="skill-tag remove">Time Management</span>
             </div>
           </div>
-
-          <textarea class="copy-target" id="skills-copy">PIN THESE 3 (profile card):
+          <textarea class="copy-target" id="skills-copy">PIN THESE 3:
 1. Executive Calendar Management
 2. Stakeholder Communication
 3. Administrative Operations
 
-ADD:
-Executive Support · Document Management · Records Confidentiality · Process Improvement · Meeting Coordination · Travel & Logistics Coordination · Office Administration · MS Excel · MS Word · MS Outlook · Procurement Support · Vendor Coordination · Customer Service
+ADD: Executive Support · Document Management · Records Confidentiality · Process Improvement · Meeting Coordination · Office Administration · MS Excel · MS Outlook · Procurement Support · Customer Service · Complaint Resolution
 
-REMOVE (no search weight):
-Teamwork · Hard Work · Time Management</textarea>
+REMOVE: Teamwork · Hard Work · Time Management</textarea>
         </div>
         <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-        <div class="rationale-content">"Executive Calendar Management" is the single most searched term by recruiters hiring EAs — it must be pinned first. Pinning these top 3 ensures they appear on the profile card before any recruiter clicks through. Removing generic soft-skill tags frees space for searchable, role-specific terms that directly influence LinkedIn's search algorithm.</div>
+        <div class="rationale-content">"Executive Calendar Management" is the single most searched term by recruiters hiring EAs — it must be pinned first. Removing generic soft-skill tags frees space for searchable, role-specific terms.</div>
         <button class="fb-toggle-btn" onclick="toggleFB(this)">Skills to add, remove, or reorder? ▾</button>
         <div class="fb-panel">
-          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
           <div class="email-hint"></div>
           <textarea class="fb-ta" placeholder="Any skills to add, remove, or change?"></textarea>
           <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -583,57 +633,51 @@ Teamwork · Hard Work · Time Management</textarea>
     </div>
   </div>
 
-  <!-- ══ S07 EDUCATION ══ -->
+  <!-- S08 EDUCATION -->
   <div class="section-block" id="s10">
     <div class="opt-section">
       <div class="opt-header">
-        <div class="opt-num">07</div>
+        <div class="opt-num">08</div>
         <div class="opt-title-group"><h3>Education &amp; Certifications</h3><div class="sub">Properly configured education entries add credibility and searchability.</div></div>
         <span class="badge badge-quick">Quick win</span>
       </div>
       <div class="opt-body">
-        <div class="box current-box">
-          <div class="box-label current-lbl">Current</div>
-          Education likely present but may be incomplete. Four qualifications represent four credibility signals — use them all.
-        </div>
+        <div class="box current-box"><div class="box-label current-lbl">Current</div>Education likely present but may be incomplete. Four qualifications — use them all.</div>
         <div class="arrow-row">→</div>
         <div class="box optimised-box">
           <div class="box-label opt-lbl">Optimised <button class="copy-btn" onclick="copyText('edu-copy',this)">⎘ Copy</button></div>
-
           <ul class="opt-ul">
             <li><strong>Zetech University</strong> — Bachelor of Business Administration, Purchasing &amp; Supply Management · 2017–2019</li>
             <li><strong>Zetech University</strong> — Diploma, Purchasing &amp; Supply Management · 2015–2016</li>
             <li><strong>Kenya Institute of Management</strong> — Certificate in Management · 2012</li>
             <li><strong>Mt Kenya University</strong> — Certificate in Hospitality Management · 2009–2011</li>
           </ul>
-
           <div style="margin-top:16px;padding:12px 16px;background:rgba(245,166,35,0.1);border-radius:6px;border-left:3px solid var(--gold);">
             <div style="font-family:sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7D6608;margin-bottom:8px;">💡 Add under Licences &amp; Certifications</div>
             <ul class="opt-ul" style="margin-top:0;">
               <li>Google Workspace certification (free, ~30 mins at workspace.google.com/learn)</li>
-              <li>Microsoft Office Specialist — Excel or Outlook (highly valued by EA hiring managers)</li>
+              <li>Microsoft Office Specialist — Excel or Outlook</li>
               <li>Any EA/admin professional development courses from LinkedIn Learning or Coursera</li>
             </ul>
           </div>
-
-          <textarea class="copy-target" id="edu-copy">EDUCATION (list all four):
+          <textarea class="copy-target" id="edu-copy">EDUCATION:
 • Zetech University — Bachelor of Business Administration, Purchasing & Supply Management · 2017–2019
 • Zetech University — Diploma, Purchasing & Supply Management · 2015–2016
 • Kenya Institute of Management — Certificate in Management · 2012
 • Mt Kenya University — Certificate in Hospitality Management · 2009–2011
 
-LICENCES & CERTIFICATIONS (recommended additions):
+LICENCES & CERTIFICATIONS (recommended):
 • Google Workspace certification
 • Microsoft Office Specialist — Excel or Outlook
 • EA/admin professional development courses (LinkedIn Learning, Coursera)</textarea>
         </div>
         <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-        <div class="rationale-content">All four qualifications should be listed — each carries a logo on LinkedIn, and logos add visual credibility. One Google Workspace or Microsoft Office Specialist badge takes 30 minutes and immediately differentiates a profile in a competitive EA applicant pool. These are free or low-cost certifications with outsized signal value.</div>
-        <button class="fb-toggle-btn" onclick="toggleFB(this)">Any corrections to education or credentials? ▾</button>
+        <div class="rationale-content">All four qualifications carry a logo on LinkedIn — logos add visual credibility. One Google Workspace badge takes 30 minutes and immediately differentiates a profile in a competitive EA applicant pool.</div>
+        <button class="fb-toggle-btn" onclick="toggleFB(this)">Any corrections? ▾</button>
         <div class="fb-panel">
-          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+          <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
           <div class="email-hint"></div>
-          <textarea class="fb-ta" placeholder="Any additional qualifications or courses to include?"></textarea>
+          <textarea class="fb-ta" placeholder="Any additional qualifications or courses?"></textarea>
           <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
           <div class="fb-confirm">✓ Feedback sent. We will be in touch within one business day.</div>
         </div>
@@ -641,15 +685,15 @@ LICENCES & CERTIFICATIONS (recommended additions):
     </div>
   </div>
 
-  <!-- PRESENCE HEADER -->
+  <!-- PRESENCE -->
   <div class="section-block" id="s-presence">
     <h2 class="section-h2">Profile presence</h2>
   </div>
 
-  <!-- ══ S08 PHOTO & BANNER ══ -->
+  <!-- S09 PHOTO & BANNER -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
-      <div class="opt-num">08</div>
+      <div class="opt-num">09</div>
       <div class="opt-title-group"><h3>Photo &amp; Banner</h3><div class="sub">The banner is seen before any text — the most visible signal of whether a profile is actively managed.</div></div>
       <span class="badge badge-quick">Quick win</span>
     </div>
@@ -659,18 +703,18 @@ LICENCES & CERTIFICATIONS (recommended additions):
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Recommended</div>
         <p style="font-size:14px;margin-bottom:10px;"><strong>Photo:</strong> Keep as-is. No change needed.</p>
-        <p style="font-size:14px;margin-bottom:10px;"><strong>Banner:</strong> Replace the default (free on Canva, ~10 mins). Three options:</p>
+        <p style="font-size:14px;margin-bottom:10px;"><strong>Banner:</strong> Replace the default (free on Canva, ~10 mins):</p>
         <ul class="opt-ul">
-          <li><strong>Option A</strong> — Navy background with "Executive Assistant · Nairobi" in clean gold type <em>(recommended)</em></li>
-          <li><strong>Option B</strong> — Subtle Nairobi skyline or office environment in dark tones</li>
-          <li><strong>Option C</strong> — Abstract professional design — navy, white, and gold palette</li>
+          <li><strong>Option A</strong> — Navy background with "Executive Assistant · Nairobi" in gold type <em>(recommended)</em></li>
+          <li><strong>Option B</strong> — Subtle Nairobi skyline in dark tones</li>
+          <li><strong>Option C</strong> — Abstract professional design — navy, white, and gold</li>
         </ul>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">A recruiter scanning LinkedIn for EA candidates will see the banner before reading a single word. A default LinkedIn banner signals the profile has not been actively maintained — the opposite of what an EA candidate wants to communicate. Option A reinforces the headline and signals that you manage your own presence with the same care you would apply to an executive's.</div>
-      <button class="fb-toggle-btn" onclick="toggleFB(this)">Banner preference — A, B, or C? ▾</button>
+      <div class="rationale-content">A default LinkedIn banner signals the profile has not been actively maintained — the opposite of what an EA candidate wants to communicate. Option A reinforces the headline and signals intentional personal branding.</div>
+      <button class="fb-toggle-btn" onclick="toggleFB(this)">Banner preference ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
         <textarea class="fb-ta" placeholder="Which banner option do you prefer?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -679,10 +723,10 @@ LICENCES & CERTIFICATIONS (recommended additions):
     </div>
   </div>
 
-  <!-- ══ S09 RECOMMENDATIONS ══ -->
+  <!-- S10 RECOMMENDATIONS -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
-      <div class="opt-num">09</div>
+      <div class="opt-num">10</div>
       <div class="opt-title-group"><h3>Recommendations</h3><div class="sub">Three strong, targeted recommendations outperform ten generic ones.</div></div>
       <span class="badge badge-medium">Medium impact</span>
     </div>
@@ -692,16 +736,16 @@ LICENCES & CERTIFICATIONS (recommended additions):
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Recommended</div>
         <ul class="opt-ul">
-          <li><strong>A direct line manager or senior leader at Square Pharmaceuticals</strong> — validates current executive support, calendar management, and stakeholder communication in a regulated environment</li>
-          <li><strong>A supervisor or team lead at Kenya Red Cross Society</strong> — validates operational credibility, documentation rigour, and structured compliance frameworks</li>
-          <li><strong>A peer or manager at Kuehne + Nagel</strong> — validates stakeholder management and high-volume inquiry handling at a global brand</li>
+          <li><strong>A line manager at Square Pharmaceuticals</strong> — validates current executive support, calendar management, and stakeholder communication</li>
+          <li><strong>A supervisor at Kenya Red Cross Society</strong> — validates operational credibility and documentation rigour</li>
+          <li><strong>A peer or manager at Kuehne + Nagel</strong> — validates high-volume stakeholder management at a global brand</li>
         </ul>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">Brief each person with specific talking points — ask them to reference a named outcome, not general character. "Maureen redesigned our supply requisition process and reduced shortages by 30% within six months" carries significantly more weight than "she is hardworking and reliable."</div>
-      <button class="fb-toggle-btn" onclick="toggleFB(this)">Thoughts on the recommendations strategy ▾</button>
+      <div class="rationale-content">Brief each person with specific talking points. "Maureen redesigned our supply requisition process and reduced shortages by 30% within six months" carries significantly more weight than "she is hardworking and reliable."</div>
+      <button class="fb-toggle-btn" onclick="toggleFB(this)">Thoughts on recommendations ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
         <textarea class="fb-ta" placeholder="Any specific contacts you are considering?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
@@ -710,116 +754,216 @@ LICENCES & CERTIFICATIONS (recommended additions):
     </div>
   </div>
 
-  <!-- ══ S10 ACTIVITY ══ -->
+  <!-- S11 ACTIVITY -->
   <div class="opt-section" style="margin-top:20px;">
     <div class="opt-header">
-      <div class="opt-num">10</div>
+      <div class="opt-num">11</div>
       <div class="opt-title-group"><h3>Activity &amp; Content</h3><div class="sub">Even one original post per month builds visibility and personal authority.</div></div>
       <span class="badge badge-quick">Quick win</span>
     </div>
     <div class="opt-body">
-      <div class="box current-box"><div class="box-label current-lbl">Current</div>Activity level unknown. Most EA candidates do not post — which means one original post immediately distinguishes a profile.</div>
+      <div class="box current-box"><div class="box-label current-lbl">Current</div>Activity level unknown. Most EA candidates do not post — one original post immediately distinguishes a profile.</div>
       <div class="arrow-row">→</div>
       <div class="box optimised-box">
         <div class="box-label opt-lbl">Recommended</div>
         <p style="font-size:14px;margin-bottom:12px;">One original post per month. Topics that perform well for EA positioning:</p>
         <ul class="opt-ul">
           <li>What makes executive-assistant relationships work well — from the EA's perspective</li>
-          <li>A tool or workflow that has improved your efficiency (Outlook calendar management, filing systems)</li>
+          <li>A tool or workflow that has improved your efficiency</li>
           <li>An observation about the EA role in a fast-paced operational environment</li>
           <li>A short reflection on a professional lesson from your career</li>
         </ul>
-        <p style="font-size:13px;color:var(--muted);margin-top:12px;font-family:sans-serif;">Posts of 150–250 words with no external links consistently outperform link-shares on LinkedIn.</p>
+        <p style="font-family:sans-serif;font-size:13px;color:var(--muted);margin-top:12px;">Posts of 150–250 words with no external links consistently outperform link-shares.</p>
       </div>
       <button class="rationale-toggle" onclick="toggleR(this)">▸ Strategic rationale</button>
-      <div class="rationale-content">EA candidates rarely post on LinkedIn — which is precisely why one original post per month creates outsized visibility. Recruiters who see an EA candidate sharing a thoughtful observation about executive support immediately categorise them as more engaged and intentional than the average applicant. One post per month is a sustainable commitment alongside a full-time role.</div>
-      <button class="fb-toggle-btn" onclick="toggleFB(this)">Thoughts on the content strategy ▾</button>
+      <div class="rationale-content">EA candidates rarely post on LinkedIn — one original post per month creates outsized visibility relative to the effort. Recruiters who see an EA candidate sharing thoughtful observations immediately categorise them as more engaged than the average applicant.</div>
+      <button class="fb-toggle-btn" onclick="toggleFB(this)">Thoughts on content strategy ▾</button>
       <div class="fb-panel">
-        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+        <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
         <div class="email-hint"></div>
-        <textarea class="fb-ta" placeholder="Any questions or preferences about LinkedIn content?"></textarea>
+        <textarea class="fb-ta" placeholder="Any questions or preferences?"></textarea>
         <button class="fb-send-btn" onclick="sendFB(this)">Send to Golden Pipit Recruiting</button>
         <div class="fb-confirm">✓ Feedback sent. We will be in touch within one business day.</div>
       </div>
     </div>
   </div>
 
-  <!-- ══ CV SECTION ══ -->
+  <!-- CV SECTION -->
   <div class="cv-section" id="cv-section">
     <div class="cv-section-hdr">
-      <h2>Maureen Wanja Kinuthia — Approved CV</h2>
-      <span style="font-family:sans-serif;font-size:12px;color:var(--muted);">Click any text to edit</span>
+      <h2>Your CVs</h2>
+      <span style="font-family:sans-serif;font-size:12px;color:var(--muted);">Two versions — EA and Administrator</span>
     </div>
-    <div class="cv-doc" contenteditable="true" spellcheck="false">
-      <div class="cv-name">MAUREEN WANJA KINUTHIA</div>
-      <div class="cv-jobtitle">Executive Assistant</div>
-      <div class="cv-contact">+254 720 587 697 &nbsp;·&nbsp; maurynewanja@gmail.com &nbsp;·&nbsp; linkedin.com/in/maureen-wanja-7160bb125 &nbsp;·&nbsp; Nairobi, Kenya</div>
-      <div class="cv-sec">Profile</div>
-      <div class="cv-profile">Professional Executive Assistant with 6+ years of experience in executive support, stakeholder communication, and office coordination across pharmaceuticals, global logistics, and the humanitarian sector. Skilled in managing executive calendars end-to-end, organising high-level meetings, maintaining accurate and confidential records, and driving process improvements that deliver measurable efficiency gains.</div>
-      <div class="cv-sec">Professional Experience</div>
-      <div class="cv-job">
-        <div class="cv-jh"><span class="cv-emp">Square Pharmaceuticals Kenya EPZ Ltd</span><span class="cv-dates">Aug 2024 – Present</span></div>
-        <div class="cv-role">Administrator — Nairobi, Kenya</div>
-        <ul class="cv-ul">
-          <li>Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised and run to time</li>
-          <li>Screen and route executive correspondence and stakeholder inquiries, ensuring professional follow-up and timely resolution</li>
-          <li>Maintain accurate, confidential records and documentation, completing urgent updates with accuracy and discretion</li>
-          <li>Reduced urgent supply shortages by ~30% within six months through proactive stock monitoring and requisition coordination</li>
-          <li>Improved recurring administrative turnaround by ~20% through SOP-driven workflow redesign and consistent handoff coordination</li>
-        </ul>
-      </div>
-      <div class="cv-job">
-        <div class="cv-jh"><span class="cv-emp">Kuehne + Nagel</span><span class="cv-dates">Oct 2021 – Mar 2022</span></div>
-        <div class="cv-role">Customer Care Assistant — Nairobi, Kenya</div>
-        <ul class="cv-ul">
-          <li>Monitored customer shipments and provided proactive updates, resolving issues early to reduce delays and escalations</li>
-          <li>Received complaint calls, coordinated with internal stakeholders, and followed through to resolution within agreed timelines</li>
-          <li>Handled 20+ inquiries weekly, preparing quotations within corporate guidelines and maintaining 24-hour response turnaround</li>
-          <li>Maintained organised client records and supported root cause documentation in internal KN systems</li>
-        </ul>
-      </div>
-      <div class="cv-job">
-        <div class="cv-jh"><span class="cv-emp">Kenya Red Cross Society</span><span class="cv-dates">Jan 2019 – Jul 2021</span></div>
-        <div class="cv-role">Procurement Assistant — Nairobi, Kenya</div>
-        <ul class="cv-ul">
-          <li>Tracked 30+ active orders weekly, escalating delays and coordinating with Finance for timely invoice processing</li>
-          <li>Supported 10+ tender processes quarterly, including tender openings and vendor evaluation, with accurate documentation</li>
-          <li>Prepared and issued LPOs, award letters, and tender-related correspondence in line with procurement procedures</li>
-          <li>Maintained procurement records and updated internal systems, supporting audit readiness and process transparency</li>
-        </ul>
-      </div>
-      <div class="cv-sec">Expertise</div>
-      <div class="cv-skills-txt">Executive Calendar &amp; Meeting Management &nbsp;·&nbsp; Stakeholder Communication &amp; Follow-up &nbsp;·&nbsp; Document Preparation, Filing &amp; Records Confidentiality &nbsp;·&nbsp; Process Coordination &amp; Tracking &nbsp;·&nbsp; Customer &amp; Stakeholder Service &nbsp;·&nbsp; MS Office (Excel, Word, Outlook)</div>
-      <div class="cv-sec">Education</div>
-      <div class="cv-edu-item"><strong>Zetech University</strong><span>Bachelor of Business Administration, Purchasing &amp; Supply Management · 2017–2019</span></div>
-      <div class="cv-edu-item"><strong>Zetech University</strong><span>Diploma, Purchasing &amp; Supply Management · 2015–2016</span></div>
-      <div class="cv-edu-item"><strong>Kenya Institute of Management</strong><span>Certificate in Management · 2012</span></div>
-      <div class="cv-edu-item"><strong>Mt Kenya University</strong><span>Certificate in Hospitality Management · 2009–2011</span></div>
-      <div style="margin-top:24px;border-top:1px solid var(--border);padding-top:14px;font-size:12px;color:var(--muted);">References available upon request</div>
+
+    <!-- TABS -->
+    <div class="cv-tabs">
+      <button class="cv-tab active" onclick="switchTab('ea',this)">Executive Assistant CV</button>
+      <button class="cv-tab" onclick="switchTab('admin',this)">Administrator CV</button>
     </div>
-    <div style="margin-top:18px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;">
-      <h4 style="font-family:sans-serif;font-size:14px;color:var(--navy);margin-bottom:8px;">Send your edits to Golden Pipit</h4>
-      <p style="font-family:sans-serif;font-size:13px;color:var(--muted);margin-bottom:12px;">Made changes above? Describe what you've updated and we'll incorporate them into the master CV files.</p>
-      <div class="email-field-wrap"><input type="email" placeholder="Your email address" oninput="validateEmail(this,this)"/><span class="email-status-icon"></span></div>
+
+    <!-- EA CV -->
+    <div class="cv-pane active" id="pane-ea">
+      <div class="cv-doc">
+        <div class="cv-name">MAUREEN WANJA KINUTHIA</div>
+        <div class="cv-jobtitle">Executive Assistant</div>
+        <div class="cv-contact">
+          +254 720 587 697 &nbsp;·&nbsp; maurynewanja@gmail.com &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/maureen-wanja-7160bb125/" target="_blank">linkedin.com/in/maureen-wanja-7160bb125</a>
+          &nbsp;·&nbsp; Nairobi, Kenya
+        </div>
+        <div class="cv-sec">Profile</div>
+        <div class="cv-profile-text">Professional Executive Assistant with 6+ years of experience in executive support, stakeholder communication, and office coordination across pharmaceuticals, global logistics, financial services, and the humanitarian sector. Skilled in managing executive calendars end-to-end, organising high-level meetings, maintaining accurate and confidential records, and driving process improvements that deliver measurable efficiency gains.</div>
+        <div class="cv-sec">Professional Experience</div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Square Pharmaceuticals Kenya EPZ Ltd</span><span class="cv-dates">Aug 2024 – Present</span></div>
+          <div class="cv-role">Administrator — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Manage calendars and coordinate meetings for senior leaders, ensuring sessions are well-organised and run to time</li>
+            <li>Screen and route executive correspondence and stakeholder inquiries, ensuring professional follow-up</li>
+            <li>Maintain accurate, confidential records and documentation with accuracy and discretion</li>
+            <li>Reduced urgent supply shortages by ~30% within six months through proactive stock monitoring</li>
+            <li>Improved recurring administrative turnaround by ~20% through SOP-driven workflow redesign</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Kuehne + Nagel</span><span class="cv-dates">Oct 2021 – Mar 2022</span></div>
+          <div class="cv-role">Customer Care Assistant — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Monitored customer shipments and provided proactive updates, resolving issues early to reduce escalations</li>
+            <li>Received complaint calls and coordinated with internal stakeholders through to resolution within agreed timelines</li>
+            <li>Handled 20+ inquiries weekly, preparing quotations with a 24-hour response turnaround commitment</li>
+            <li>Maintained organised client records and supported root cause documentation in KN systems</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Kenya Red Cross Society</span><span class="cv-dates">Jan 2019 – Jul 2021</span></div>
+          <div class="cv-role">Procurement Assistant — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Tracked 30+ active orders weekly, escalating delays and coordinating with Finance for timely invoice processing</li>
+            <li>Supported 10+ tender processes quarterly with accurate documentation throughout</li>
+            <li>Prepared and issued LPOs, award letters, and tender-related correspondence</li>
+            <li>Maintained procurement records, supporting audit readiness and process transparency</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Premier Credit Limited</span><span class="cv-dates">Jun 2017 – May 2018</span></div>
+          <div class="cv-role">Customer Service Officer — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Responded to customer inquiries via phone, electronic channels, and face-to-face engagements</li>
+            <li>Handled and resolved customer complaints, coordinating follow-up with internal teams</li>
+            <li>Performed customer verifications and supported new account setup per SOPs</li>
+            <li>Processed customer forms and loan requests accurately, maintaining compliant records</li>
+          </ul>
+        </div>
+        <div class="cv-sec">Expertise</div>
+        <div class="cv-skills-txt">Executive Calendar &amp; Meeting Management &nbsp;·&nbsp; Stakeholder Communication &amp; Follow-up &nbsp;·&nbsp; Document Preparation &amp; Records Confidentiality &nbsp;·&nbsp; Process Coordination &amp; Tracking &nbsp;·&nbsp; Customer &amp; Stakeholder Service &nbsp;·&nbsp; MS Office (Excel, Word, Outlook)</div>
+        <div class="cv-sec">Education</div>
+        <div class="cv-edu-item"><strong>Zetech University</strong><span>Bachelor of Business Administration, Purchasing &amp; Supply Management · 2017–2019</span></div>
+        <div class="cv-edu-item"><strong>Zetech University</strong><span>Diploma, Purchasing &amp; Supply Management · 2015–2016</span></div>
+        <div class="cv-edu-item"><strong>Kenya Institute of Management</strong><span>Certificate in Management · 2012</span></div>
+        <div class="cv-edu-item"><strong>Mt Kenya University</strong><span>Certificate in Hospitality Management · 2009–2011</span></div>
+        <div style="margin-top:20px;border-top:1px solid var(--border);padding-top:12px;font-size:12px;color:var(--muted);">References available upon request</div>
+      </div>
+    </div>
+
+    <!-- ADMIN CV -->
+    <div class="cv-pane" id="pane-admin">
+      <div class="cv-doc">
+        <div class="cv-name">MAUREEN WANJA KINUTHIA</div>
+        <div class="cv-jobtitle">Administration | Office Support</div>
+        <div class="cv-contact">
+          +254 720 587 697 &nbsp;·&nbsp; maurynewanja@gmail.com &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/maureen-wanja-7160bb125/" target="_blank">linkedin.com/in/maureen-wanja-7160bb125</a>
+          &nbsp;·&nbsp; Nairobi, Kenya
+        </div>
+        <div class="cv-sec">Profile</div>
+        <div class="cv-profile-text">Dedicated Administrator with 6+ years of experience supporting office operations, front-desk and phone management, calendar coordination, and confidential recordkeeping in fast-paced environments. Skilled in managing inquiries end-to-end, organising meetings and schedules, maintaining accurate databases and documentation, and ensuring smooth day-to-day workflow through structured follow-up and clear communication.</div>
+        <div class="cv-sec">Professional Experience</div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Square Pharmaceuticals Kenya EPZ Ltd</span><span class="cv-dates">Aug 2024 – Present</span></div>
+          <div class="cv-role">Administrator — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Handle incoming calls and front-desk inquiries, directing them appropriately and following up as needed</li>
+            <li>Coordinate schedules and meeting logistics to keep appointments organised and running smoothly</li>
+            <li>Maintain accurate, confidential records and complete priority updates promptly</li>
+            <li>Improved recurring admin turnaround by ~20% through SOP-driven handoffs and tighter workflow coordination</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Kuehne + Nagel</span><span class="cv-dates">Oct 2021 – Mar 2022</span></div>
+          <div class="cv-role">Customer Care Assistant — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Monitored customer shipments and provided proactive updates, resolving issues early to reduce delays</li>
+            <li>Received complaint calls and followed through to resolution within agreed timelines</li>
+            <li>Qualified inquiries, prepared quotations, and managed follow-up, handling 20+ inquiries weekly</li>
+            <li>Maintained organised client records and supported investigations in KN systems</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Kenya Red Cross Society</span><span class="cv-dates">Jan 2019 – Jul 2021</span></div>
+          <div class="cv-role">Procurement Assistant — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Tracked 30+ active orders weekly, escalating delays and coordinating with Finance for invoice processing</li>
+            <li>Supported 10+ tender processes quarterly, including tender openings and vendor evaluation</li>
+            <li>Prepared and issued LPOs, award letters, and tender-related correspondence</li>
+            <li>Maintained procurement records and updated internal systems, supporting audit readiness</li>
+          </ul>
+        </div>
+        <div class="cv-job">
+          <div class="cv-jh"><span class="cv-emp">Premier Credit Limited</span><span class="cv-dates">Jun 2017 – May 2018</span></div>
+          <div class="cv-role">Customer Service Officer — Nairobi, Kenya</div>
+          <ul class="cv-ul">
+            <li>Responded to customer inquiries via phone, electronic channels, and face-to-face engagements</li>
+            <li>Handled and resolved customer complaints, coordinating follow-up with internal teams</li>
+            <li>Performed customer verifications and supported new account setup per SOPs</li>
+            <li>Processed customer forms and loan requests accurately, maintaining complete and compliant records</li>
+          </ul>
+        </div>
+        <div class="cv-sec">Expertise</div>
+        <div class="cv-skills-txt">Office Administration (front desk, scheduling, visitor management) &nbsp;·&nbsp; Document Control &amp; Filing Systems &nbsp;·&nbsp; Data Entry &amp; Database Updates &nbsp;·&nbsp; Procurement Support (RFQs/LPOs, vendor follow-up) &nbsp;·&nbsp; Customer-facing Communication &amp; Issue Resolution &nbsp;·&nbsp; MS Office (Excel, Word, Outlook)</div>
+        <div class="cv-sec">Education</div>
+        <div class="cv-edu-item"><strong>Zetech University</strong><span>Bachelor of Business Administration, Purchasing &amp; Supply Management · 2017–2019</span></div>
+        <div class="cv-edu-item"><strong>Zetech University</strong><span>Diploma, Purchasing &amp; Supply Management · 2015–2016</span></div>
+        <div class="cv-edu-item"><strong>Kenya Institute of Management</strong><span>Certificate in Management · 2012</span></div>
+        <div class="cv-edu-item"><strong>Mt Kenya University</strong><span>Certificate in Hospitality Management · 2009–2011</span></div>
+        <div style="margin-top:20px;border-top:1px solid var(--border);padding-top:12px;font-size:12px;color:var(--muted);">References available upon request</div>
+      </div>
+    </div>
+
+    <!-- CV FEEDBACK -->
+    <div class="cv-feedback-box">
+      <h4>Request changes to your CV</h4>
+      <p>Your CVs are prepared by Golden Pipit Recruiting based on your uploaded documents. If you'd like any changes — to wording, layout, or content — describe them below and we'll update the files and send you a revised version.</p>
+      <div class="cv-dl-row">
+        <a href="images/maureen-cv-ea.pdf" download="Maureen-Wanja-Kinuthia-CV-ExecutiveAssistant.pdf" class="cv-dl-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download EA CV
+        </a>
+        <a href="images/maureen-cv-admin.pdf" download="Maureen-Wanja-Kinuthia-CV-Administrator.pdf" class="cv-dl-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Administrator CV
+        </a>
+      </div>
+      <div class="email-field-wrap"><input type="email" id="cv-fb-email" placeholder="Your email address" oninput="validateEmail(this)"/><span class="email-status-icon"></span></div>
       <div class="email-hint"></div>
-      <textarea class="fb-ta" placeholder="Describe your edits here..."></textarea>
-      <button class="fb-send-btn" onclick="sendFB(this)">Send changes to GPR</button>
-      <div class="fb-confirm">✓ Changes sent. We will update the master files and confirm within one business day.</div>
+      <textarea class="fb-ta" id="cv-fb-text" placeholder="Describe the changes you'd like made — e.g. 'Update my current job title to Senior Administrator' or 'Add a new role at XYZ Company'..."></textarea>
+      <button class="fb-send-btn" onclick="sendCVFeedback()">Send change request to Golden Pipit Recruiting</button>
+      <div id="cv-fb-confirm" class="fb-confirm">✓ Your change request has been sent to info@goldenpipitrecruiting.com. We will update your CV and respond within one business day.</div>
     </div>
   </div>
 
-  <!-- ══ OVERALL FEEDBACK ══ -->
+  <!-- OVERALL FEEDBACK -->
   <div class="overall-fb" id="feedback">
     <h2 class="section-h2">Share your overall response</h2>
-    <p style="font-family:sans-serif;font-size:14px;color:var(--muted);margin-bottom:4px;">Once you have worked through the sections above, send your consolidated comments here. We will respond within one business day.</p>
+    <p style="font-family:sans-serif;font-size:14px;color:var(--muted);margin-bottom:4px;">Use this form to send your consolidated comments to us. We will respond within one business day.</p>
     <label>Your name</label>
     <input type="text" placeholder="Maureen Wanja Kinuthia"/>
     <label>Your email address</label>
     <div class="email-field-wrap" style="margin-bottom:0;">
-      <input type="email" id="overall-email" placeholder="e.g. maurynewanja@gmail.com" oninput="validateEmail(this,this)"/>
+      <input type="email" id="overall-email" placeholder="e.g. maurynewanja@gmail.com" oninput="validateEmail(this)"/>
       <span class="email-status-icon"></span>
     </div>
-    <div class="email-hint" id="overall-hint" style="margin-bottom:12px;"></div>
+    <div class="email-hint" style="margin-bottom:12px;"></div>
     <label>Overall rating</label>
     <select>
       <option value="">Select a rating</option>
@@ -829,15 +973,15 @@ LICENCES & CERTIFICATIONS (recommended additions):
       <option>2 — Significant revisions needed</option>
       <option>1 — Would like to discuss from scratch</option>
     </select>
-    <label>Overall comments, questions, or anything we've missed</label>
+    <label>Overall comments</label>
     <textarea placeholder="Your overall feedback..."></textarea>
     <button onclick="sendOverall(this)" style="margin-top:14px;background:var(--navy);color:var(--white);border:none;padding:11px 24px;border-radius:4px;font-family:sans-serif;font-size:14px;font-weight:600;cursor:pointer;">Send feedback to Golden Pipit Recruiting</button>
-    <div id="overall-confirm" style="font-family:sans-serif;font-size:13px;color:var(--quick);margin-top:10px;display:none;">✓ Your feedback has been sent. We will be in touch within one business day.</div>
+    <div id="overall-confirm" style="font-family:sans-serif;font-size:13px;color:var(--quick);margin-top:10px;display:none;">✓ Your feedback has been sent to info@goldenpipitrecruiting.com. We will be in touch within one business day.</div>
   </div>
 
-</div><!-- /container -->
+</div>
 
-<!-- ══ PROMO BAND ══ -->
+<!-- PROMO BAND -->
 <div class="promo-band">
   <p>Prepared by</p>
   <h3>Golden Pipit Recruiting</h3>
@@ -847,74 +991,88 @@ LICENCES & CERTIFICATIONS (recommended additions):
 
 <footer>
   <a href="https://goldenpipitcareers.com" target="_blank">goldenpipitcareers.com</a><br/>
-  Viewpark Towers, Suite 1, Utalii Street · Nairobi, Kenya · info@goldenpipitrecruiting.com<br/>
-  Client: Maureen Wanja Kinuthia &nbsp;·&nbsp; Document: LinkedIn Optimisation Report &nbsp;·&nbsp; Ref: PO-120 · April 2026 · Confidential
+  Viewpark Towers, Suite 1, Utalii Street · Nairobi, Kenya · <a href="mailto:info@goldenpipitrecruiting.com">info@goldenpipitrecruiting.com</a><br/>
+  Client: Maureen Wanja Kinuthia &nbsp;·&nbsp; Ref: PO-120 · April 2026 · Confidential
 </footer>
 
 <script>
-/* ── Email validation ── */
+/* Email validation */
 function validateEmail(input) {
-  const val = input.value.trim();
+  const v = input.value.trim();
   const wrap = input.closest('.email-field-wrap');
   const icon = wrap ? wrap.querySelector('.email-status-icon') : null;
   const hint = wrap ? wrap.nextElementSibling : null;
-  if (!val) {
+  if (!v) {
     input.className = input.className.replace(/\bvalid\b|\binvalid\b/g,'').trim();
     if(icon) icon.textContent='';
-    if(hint && hint.classList.contains('email-hint')){ hint.className='email-hint'; hint.textContent=''; }
+    if(hint && hint.classList.contains('email-hint')){hint.className='email-hint';hint.textContent='';}
     return false;
   }
-  const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
-  input.className = (input.className.replace(/\bvalid\b|\binvalid\b/g,'').trim()) + (ok?' valid':' invalid');
-  if(icon) icon.textContent = ok ? '✓' : '✗';
+  const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  input.className = input.className.replace(/\bvalid\b|\binvalid\b/g,'').trim() + (ok?' valid':' invalid');
+  if(icon) icon.textContent = ok?'✓':'✗';
   if(hint && hint.classList.contains('email-hint')){
-    hint.className = ok ? 'email-hint show ok' : 'email-hint show err';
-    hint.textContent = ok ? 'Email address looks good.' : 'Please enter a valid email address (e.g. name@domain.com).';
+    hint.className = ok?'email-hint show ok':'email-hint show err';
+    hint.textContent = ok?'Email address looks good.':'Please enter a valid email address.';
   }
   return ok;
 }
 
-/* ── Rationale toggle ── */
+/* Tab switcher */
+function switchTab(id, btn) {
+  document.querySelectorAll('.cv-pane').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.cv-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pane-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* Rationale toggle */
 function toggleR(btn) {
   const c = btn.nextElementSibling;
   const open = c.classList.toggle('open');
-  btn.textContent = (open ? '▾' : '▸') + ' Strategic rationale';
+  btn.textContent = (open?'▾':'▸') + ' Strategic rationale';
 }
 
-/* ── Feedback panel toggle ── */
+/* Feedback panel toggle */
 function toggleFB(btn) {
   const panel = btn.nextElementSibling;
   const open = panel.classList.toggle('open');
   btn.textContent = btn.textContent.replace(open?'▾':'▴', open?'▴':'▾');
 }
 
-/* ── Send feedback ── */
+/* Send section feedback */
 function sendFB(btn) {
   const panel = btn.parentElement;
   const emailInput = panel.querySelector('input[type="email"]');
-  if (emailInput && !validateEmail(emailInput)) {
-    emailInput.focus(); return;
-  }
+  if(emailInput && !validateEmail(emailInput)){emailInput.focus();return;}
   panel.querySelector('.fb-confirm').style.display='block';
   btn.style.display='none';
 }
 
-/* ── Send overall ── */
+/* Send CV feedback */
+function sendCVFeedback() {
+  const emailInput = document.getElementById('cv-fb-email');
+  if(!validateEmail(emailInput)){emailInput.focus();return;}
+  document.getElementById('cv-fb-confirm').style.display='block';
+  document.querySelector('.cv-feedback-box .fb-send-btn').style.display='none';
+}
+
+/* Send overall */
 function sendOverall(btn) {
   const emailInput = document.getElementById('overall-email');
-  if (!validateEmail(emailInput)) { emailInput.focus(); return; }
+  if(!validateEmail(emailInput)){emailInput.focus();return;}
   document.getElementById('overall-confirm').style.display='block';
   btn.style.display='none';
 }
 
-/* ── Copy to clipboard ── */
-function copyText(targetId, btn) {
-  const el = document.getElementById(targetId);
-  navigator.clipboard.writeText(el.value).then(() => {
+/* Copy to clipboard */
+function copyText(id, btn) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.value).then(()=>{
     const orig = btn.textContent;
     btn.textContent='✓ Copied!';
     btn.style.background='#1A7A4A';
-    setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; }, 2200);
+    setTimeout(()=>{btn.textContent=orig;btn.style.background='';},2200);
   });
 }
 </script>
